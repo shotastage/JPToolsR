@@ -24,8 +24,6 @@ is_Weekday <- function(timestamp) {
   # Define weekdays and weekends
   weekdays_list <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
-  print(paste0("INFO: Executing Japanese Holidy Checker Job No: ", sample(1:9999, 1)))
-
   # Check if the date is a holiday or weekday
   is_holiday_or_weekday <- ifelse(date %in% jp_governmental_holiday_db[, 1], FALSE,
                                   ifelse(weekday %in% weekdays_list, TRUE, FALSE))
